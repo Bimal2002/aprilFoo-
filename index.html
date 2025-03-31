@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 Exclusive Song for You! | April Fool's Prank</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #333;
+        }
+        .song-box {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+        .play-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+        }
+        .play-btn:hover {
+            background: #ff5252;
+            transform: scale(1.05);
+        }
+        .hidden {
+            display: none;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        .emoji {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="song-box">
+        <h1>🎧 Exclusive Song for You!</h1>
+        <p>We've composed a special song just for you! Click below to listen:</p>
+        
+        <button class="play-btn" onclick="playSong()">▶️ Play Song</button>
+        
+        <div id="song-result" class="hidden">
+            <div class="emoji">🤣</div>
+            <div class="result">APRIL FOOL ! 😜</div>
+            <p>That wasn't a song... it was a prank!</p>
+        </div>
+    </div>
+
+    <audio id="prank-sound" src="April Fool Banaya 128 Kbps.mp3" preload="auto"></audio>
+
+    <script>
+        function playSong() {
+            // Play funny sound instead of song
+            const sound = document.getElementById("prank-sound");
+            sound.play();
+            
+            // Show the prank result
+            document.getElementById("song-result").classList.remove("hidden");
+            
+            // Change button text
+            document.querySelector('.play-btn').textContent = "😂 Try Again?";
+        }
+    </script>
+</body>
+</html>
